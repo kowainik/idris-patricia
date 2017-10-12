@@ -1,0 +1,19 @@
+package patricia
+
+author     = Dmitry Kovanikov
+maintainer = Dmitry Kovanikov
+license    = MIT
+brief      = "IntMap based on patricia tree."
+readme     = README.md
+
+sourceloc  = https://github.com/ChShersh/idris-persistent-array
+bugtracker = https://github.com/ChShersh/idris-persistent-array/issues
+
+opts = "--warnreach"
+
+sourcedir = lib
+
+modules = Patricia.BitsUtils
+        , Patricia.IntMap
+
+tests = test.Patricia.SpecTest
