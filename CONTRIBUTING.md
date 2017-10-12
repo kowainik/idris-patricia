@@ -21,8 +21,8 @@ Make your changes and consider the following check list to go through before sub
 - [ ] New/fixed features work as expected
 - [ ] Old features do not break after the change
 - [ ] Commit messages are in the proper format. If the commit addresses an issue start the first line of the commit with the issue number in square parentheses.
-    **_Example:_** `[#42] Short commit description`
-    __Recomended:__ add emoji to commit according to [this guide](https://github.com/slashsBin/styleguide-git-commit-message)
+  + **_Example:_** `[#42] Short commit description` 
+  + _Recomended:_ add emoji to commit according to [this guide](https://github.com/slashsBin/styleguide-git-commit-message)
 
 After all above is done commit and push to your fork.
 Now you are ready to [submit a pull request][pr].
