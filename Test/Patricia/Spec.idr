@@ -1,5 +1,5 @@
 ||| Testing IntMap using silly stupid tests
-module Patricia.SpecTest
+module Test.Patricia.Spec
 
 import Patricia.IntMap
 import Specdris.Spec

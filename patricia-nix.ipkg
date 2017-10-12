@@ -9,8 +9,6 @@ readme     = README.md
 sourceloc  = https://github.com/ChShersh/idris-patricia
 bugtracker = https://github.com/ChShersh/idris-patricia/issues
 
-pkgs = specdris
-
 modules = Patricia.BitsUtils
         , Patricia.IntMap
         , Test.Patricia.Spec

@@ -1,8 +1,0 @@
-package patricia_tests
-
-opts = "--sourcepath ../lib/ --idrispath ../lib/"
-
-pkgs = specdris
-
-modules = Patricia.SpecTest
-tests   = Patricia.SpecTest.main
