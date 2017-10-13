@@ -163,18 +163,6 @@ insert {n} key val t with (intToBits {n=S n} key)
              else Bin pref brBit left (go right)
         else joinNodes br (Leaf bitKey val)
 
--- λΠ> the (Int32Map String) $ insert 3 "a" Empty
--- Leaf (MkBits 3) "a" : IntBitMap 32 String
--- λΠ> the (Int32Map String) $ insert 2 "c" $ insert 4 "b" $ insert 3 "a" Empty
--- Bin (MkBits 3)
---     (FS (FS FZ))
---     (Bin (MkBits 2) FZ (Leaf (MkBits 2) "c") (Leaf (MkBits 3) "a"))
---     (Leaf (MkBits 4) "b") : IntBitMap 32 String
--- λΠ> toList $ the (Int32Map String) $ insert 2 "c" $ insert 4 "b" $ insert 3 "a" Empty
--- Can't find implementation for Foldable Int32Map
--- λΠ> toList $ the (IntBitMap 32 String) $ insert 2 "c" $ insert 4 "b" $ insert 3 "a" Empty
--- ["c", "a", "b"] : List String
-
 ||| `O(min(n,W))`. Delete `key` with corresponding `value` from `IntBitMap`.
 ||| If the key is not present in the map, the tree isn't changed.
 public export
