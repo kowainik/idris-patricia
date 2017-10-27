@@ -2,6 +2,7 @@
 module Test.Patricia.Spec
 
 import Patricia.IntMap
+import Patricia.IntSet
 import Specdris.Spec
 
 ----------------------------------------------------------------------------
@@ -16,6 +17,19 @@ biggerMap = insert 5 "e" initMap
 
 lesserMap : Int32Map String
 lesserMap = delete 10 $ delete 5 $ delete 2 biggerMap
+
+----------------------------------------------------------------------------
+-- Sets to test
+----------------------------------------------------------------------------
+
+initSet : Int32Set
+initSet = fromList [1, 2, 3, 4, 4]
+
+biggerSet : Int32Set
+biggerSet = insert 5 initSet
+
+lesserSet : Int32Set
+lesserSet = delete 10 $ delete 5 $ delete 2 biggerSet
 
 ----------------------------------------------------------------------------
 -- Test runner
@@ -41,3 +55,16 @@ main = spec $ do
       values initMap   `shouldBe` ["a", "b", "c", "x"]
       values biggerMap `shouldBe` ["a", "b", "c", "x", "e"]
       values lesserMap `shouldBe` ["a", "c", "x"]
+  describe "IntSet" $ do
+    it "size" $ do
+      size initSet   `shouldBe` 4
+      size biggerSet `shouldBe` 5
+      size lesserSet `shouldBe` 3
+    it "member & insert & delete" $ do
+      member 2 initSet   `shouldBe` True
+      member 4 initSet   `shouldBe` True
+      member 0 initSet   `shouldBe` False
+      member 5 biggerSet `shouldBe` True
+      member 5 lesserSet `shouldBe` False
+      member 2 lesserSet `shouldBe` False
+      member 3 lesserSet `shouldBe` True
