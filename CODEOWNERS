@@ -1,0 +1,6 @@
+# CODEOWNERS
+
+*                           @ChShersh
+
+Patricia/IntSet.idr         @arbuztw
+Test/Patricia/Spec.idr      @arbuztw
