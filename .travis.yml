@@ -1,7 +1,11 @@
-language: nix
+os: osx
+
+install:
+  - brew install idris
+  - ./install-dependencies.sh
 
 script:
-- >
-  nix-shell -A idris-patricia                       \
-            --command "bash install-dependencies.sh \
-                    && idris --testpkg patricia-nix.ipkg --idrispath dependencies/specdris/src"
+  - idris --testpkg patricia.ipkg
+
+notifications:
+  email: false

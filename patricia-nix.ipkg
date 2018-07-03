@@ -1,13 +1,13 @@
 package patricia
 
-author     = Dmitry Kovanikov
-maintainer = Dmitry Kovanikov
+author     = Dmitrii Kovanikov
+maintainer = Dmitrii Kovanikov
 license    = MIT
 brief      = "IntMap based on patricia tree."
 readme     = README.md
 
-sourceloc  = https://github.com/ChShersh/idris-patricia
-bugtracker = https://github.com/ChShersh/idris-patricia/issues
+sourceloc  = https://github.com/kowainik/idris-patricia
+bugtracker = https://github.com/kowainik/idris-patricia/issues
 
 modules = Patricia.BitsUtils
         , Patricia.IntMap
